@@ -1,0 +1,22 @@
+<!-- Basic Algorithm that takes values of age, height and weight -->
+<!-- Multiplies the values by a factor -->
+<!-- ((Age * 0.625) + (Height * 0.5) + (Weight * 0.625)) -->
+<!-- Result is multiplied by result from History and Spectrum values -->
+<!-- <%= Biometric = ([@player.age * 0.625] + [@player.height * 0.5] + [@player.weight * 0.625]) %> -->
+
+<!-- Basic Algorithm that takes the values of injuries, minutes_played, and strength_of_schedule -->
+<!-- Multiplies the values by a factor -->
+<!-- ((Injury * 1.25) + (minutes_played * 0.1) + (strength_of_schedule/0.625)) -->
+<!-- Result is multiplied by result from Biometric and Spectrum -->
+<!-- <%= History = ([@player.injuries * 1.25] + [@player.minutes_played * 0.1] + [@player.strength_of_schedule/0.625]) %> -->
+
+<!-- Basic Algorithm that takes the values of position_injury and severity_of_injury -->
+<!-- Multiplies the values by a factor -->
+<!-- ((position_injury * 0.625) + (severity_of_injury * 1)) -->
+<!-- Result is multiplied by result from Biometric and History -->
+<!-- <%= Spectrum = ([@player.position_injury * 0.625] + [@player.severity_of_injury * 1]) %> -->
+
+<!-- Multiplies the values from biometric, history and spectrum -->
+<!-- Divides result by 50000 -->
+<!-- Result shown as a percentage -->
+<!-- <h1>Injury Risk: <%= (Biometric * History * Spectrum)/50000 %>%</h1> -->

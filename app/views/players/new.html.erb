@@ -1,0 +1,29 @@
+<h1>Players Page</h1>
+<h2>Choose A Player</h2>
+<!-- Drop down menu to select player  -->
+<%= form_for Player.new do |f| %>
+  Name: <%= f.text_field :name %>
+  <br>
+  Position: <%= f.text_field :position %>
+  <br>
+  School: <%= f.text_field :school %>
+  <br>
+  Age: <%= f.text_field :age %>
+  <br>
+  Height: <%= f.text_field :height %>
+  <br>
+  Weight: <%= f.text_field :weight %>
+  <br>
+  Injuries: <%= f.text_field :injuries %>
+  <br>
+  Minutes Played: <%= f.text_field :minutes_played %>
+  <br>
+  Strength of Schedule: <%= f.text_field :strength_of_schedule%>
+  <br>
+  Likelihood of Position Specific Injuries: <%= f.text_field :position_injury %>
+  <br>
+  Severity: <%= f.text_field :severity_of_injury %>
+  <br>
+  <!-- Submit should send to player show page -->
+  <%= f.submit %>
+<% end %>

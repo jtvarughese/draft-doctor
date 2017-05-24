@@ -1,0 +1,9 @@
+<h1 id="players-header">Players</h1>
+<h2 id="choose-player-header">Choose A Player</h2>
+
+<div id="players-list-div">
+  <% @players.each do |player| %>
+    <%= player.name %>
+    <br>
+  <% end %>
+</div>

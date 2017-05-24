@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DraftDoctor</title>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Sonsie+One|Krona+One|Open+Sans" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <!-- Navbar with links -->
+    <nav class="navbar">
+      <div id="logo-div">Sports Doctor</div>
+      <div>
+        <%= link_to "HOME", home_index_path, :class => 'navlink' %>
+        <%= link_to "PLAYER SEARCH", players_path, :class => 'navlink' %>
+        <%= link_to "COMPARE PLAYERS", players_path, :class => 'navlink' %>
+      </div>
+    </nav>
+    <!-- A flash notice to alert me when a player's info was saved -->
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+
+    <%= yield %>
+
+    <!-- Footer with generic footer links -->
+    <footer>
+    </footer>
+
+  </body>
+</html>
