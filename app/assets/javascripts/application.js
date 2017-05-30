@@ -52,7 +52,7 @@
 //
 // }
 
-<script>
+
 var gaugeChart = AmCharts.makeChart("chartdiv", {
   "type": "gauge",
   "theme": "light",
@@ -119,7 +119,7 @@ var gaugeChart = AmCharts.makeChart("chartdiv", {
     }]
   }],
   "allLabels": [{
-    "text": "First option",
+    "text": "Biometrics",
     "x": "49%",
     "y": "5%",
     "size": 15,
@@ -127,7 +127,7 @@ var gaugeChart = AmCharts.makeChart("chartdiv", {
     "color": "#84b761",
     "align": "right"
   }, {
-    "text": "Second option",
+    "text": "Injury History",
     "x": "49%",
     "y": "15%",
     "size": 15,
@@ -135,7 +135,7 @@ var gaugeChart = AmCharts.makeChart("chartdiv", {
     "color": "#fdd400",
     "align": "right"
   }, {
-    "text": "Third option",
+    "text": "Spectrum",
     "x": "49%",
     "y": "24%",
     "size": 15,
@@ -143,7 +143,7 @@ var gaugeChart = AmCharts.makeChart("chartdiv", {
     "color": "#cc4748",
     "align": "right"
   }, {
-    "text": "Fourth option",
+    "text": "Injury Risk",
     "x": "49%",
     "y": "33%",
     "size": 15,
@@ -155,4 +155,3 @@ var gaugeChart = AmCharts.makeChart("chartdiv", {
     "enabled": true
   }
 });
-</script>
