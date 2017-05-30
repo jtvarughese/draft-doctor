@@ -6,7 +6,7 @@
 <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 <!-- Players Info -->
 <div class="div-specs-1">
-  <h2><%= @player.name %></h2>
+  <h2 class="player-name"><%= @player.name %></h2>
   <h4 class="player-pos-school">Position: <%= @player.position %></h4>
   <h4 class="player-pos-school">School: <%= @player.school %></h4>
   <br>
@@ -23,58 +23,49 @@
 <!-- Section to display age, height, and weight -->
 <div class="holder-div">
   <div class="div-specs-2">
-    <h3>Biometrics</h3>
+    <h3 class="specs-titles">Biometrics</h3>
     <h5>Age: <%= @player.age %></h5>
     <h5>Height (inches): <%= @player.height %></h5>
     <h5>Weight (lbs): <%= @player.weight %></h5>
+    <!-- <hr class="vert-line"> -->
   </div>
+
 
 <!-- Section to display injuries, min played, and SOS -->
   <div class="div-specs-3">
-    <h3>History</h3>
+    <h3 class="specs-titles">History</h3>
     <h5>Injuries: <%= @player.injuries %></h5>
     <h5>Minutes Played: <%= @player.minutes_played %></h5>
-    <h5>S.O.S.: <%= @player.strength_of_schedule %></h5>
+    <h5>Strength of Schedule: <%= @player.strength_of_schedule %></h5>
+    <!-- <hr class="vert-line"> -->
   </div>
 
 <!-- Section to display likelihood of injuries for specific position -->
 <!-- and severity of injuries -->
   <div class="div-specs-4">
-    <h3>Spectrum</h3>
+    <h3 class="specs-titles">Spectrum</h3>
     <h5>Position Specific Injury Value*: <%= @player.position_injury %></h5>
     <h5>Injury Severity Value*: <%= @player.severity_of_injury %></h5>
-    <h6>*Values on scale of 0-10 with 0 being the best and 10 as the worst</h6>
+    <h6>*Values on scale of 0-10 with 0 being <br> the best and 10 as the worst</h6>
+  </div>
+
+  <!-- Basic Algorithm that takes values of age, height and weight -->
+  <!-- Multiplies the values by a factor -->
+  <!-- ((Age * 0.625) + (Height * 0.5) + (Weight * 0.625)) -->
+  <!-- Above is multiplied by the following formula to calculate injury, minutes_played, and strength_of_schedule -->
+  <!-- ((Injury * 1.25) + (minutes_played * 0.1) + (strength_of_schedule/0.625)) -->
+  <!-- Results are multiplied by the following formula to calculate position_injury and severity_of_injury -->
+  <!-- ((position_injury * 0.625) + (severity_of_injury * 1)) -->
+  <!-- Result divided by 50000 -->
+  <div id="algo">
+    <p>Injury Factor: <%= (@player.age * 0.625 + @player.height * 0.5 +  @player.weight * 0.625) * (@player.injuries * 1.25 + @player.minutes_played * 0.1 + @player.strength_of_schedule/0.625) * (@player.position_injury * 0.625 + @player.severity_of_injury * 1) / 5000 %>%
+    </p>
   </div>
 </div>
+<br>
 
-<!-- Basic Algorithm that takes values of age, height and weight -->
-<!-- Multiplies the values by a factor -->
-<!-- ((Age * 0.625) + (Height * 0.5) + (Weight * 0.625)) -->
-<!-- Result is multiplied by result from History and Spectrum values -->
-<%= [@player.age * 0.625 + @player.height * 0.5 + @player.weight * 0.625] %>
-
-<!-- Basic Algorithm that takes the values of injuries, minutes_played, and strength_of_schedule -->
-<!-- Multiplies the values by a factor -->
-<!-- ((Injury * 1.25) + (minutes_played * 0.1) + (strength_of_schedule/0.625)) -->
-<!-- Result is multiplied by result from Biometric and Spectrum -->
-<%= ([@player.injuries * 1.25] + [@player.minutes_played * 0.1] + [@player.strength_of_schedule/0.625]) %>
-
-<!-- Basic Algorithm that takes the values of position_injury and severity_of_injury -->
-<!-- Multiplies the values by a factor -->
-<!-- ((position_injury * 0.625) + (severity_of_injury * 1)) -->
-<!-- Result is multiplied by result from Biometric and History -->
-<%= ([@player.position_injury * 0.625] + [@player.severity_of_injury * 1]) %>
-
-<!-- Multiplies the values from biometric, history and spectrum -->
-<!-- Divides result by 50000 -->
-<!-- Result shown as a percentage -->
-
-
+<!-- Displays the radial chart -->
 <div id="chartdiv"></div>
 
-<!-- Div to show percentage of injury risk -->
-<div class="">
-
-</div>
 
 <!-- Below - Possible 'compare players' button to send user to new page -->

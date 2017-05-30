@@ -38,11 +38,11 @@ body {
   background: linear-gradient(to bottom right, #093f96, #77c2ea); /* Standard syntax */
   padding: 20px 5px;
   box-shadow: 6px 4px 3px #3c4759;
-  text-align: center;
+  text-align: right;
 }
 /* Links within the nav bar */
 .navlink {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Krona One', sans-serif;
   color: white;
   text-decoration: none;
   font-size: 20px;
@@ -54,54 +54,76 @@ body {
   text-decoration: none;
 }
 /* The name of app 'Sports Doctor' */
+
 #img-div {
-  width: 100%;
-  height: 30%;
-  opacity: 0.5;
+  width: 50%;
+  height: 10%;
+  opacity: 0.4;
 }
 
 /* Homepage - div containing about us info */
 #about-us-div{
-  background-color: #c42929;
+  background: #c42929; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #c42929, #e25b58); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #c42929, #e25b58); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #c42929, #e25b58); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #c42929, #e25b58); /* Standard syntax */
   padding: 30px 0px 35px 0px;
-  z-index: 1;
   box-shadow: 6px 4px 3px #3c4759;
 }
 /* Homepage - about us header and paragraph */
-#about-us-header, #about-us-paragraph {
+.about-us-header {
   font-family: 'Krona One', sans-serif;
+  font-size: 24px;
   text-align: center;
   color: #e5e3e3;
 }
 /* Homepage about us paragraph text */
-#about-us-paragraph {
+.about-us-paragraph {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   width: 65%;
   margin: 0 auto;
   line-height: 30px;
+  text-align: center;
+  color: #e5e3e3;
 }
 
 #home-div-3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  color: #e5e3e3;
+  text-align: center;
   height: 200px;
-  width: 100%;
   background-color: #093f96;
+  background: -webkit-linear-gradient(left top, #093f96, #1d62d1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #093f96, #1d62d1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #093f96, #1d62d1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #093f96, #1d62d1); /* Standard syntax */
   box-shadow: 6px 4px 3px #3c4759;
 }
-
+/* search players button*/
 button {
   text-align: center;
   background-color: #e5e3e3;
   border-radius: 6px;
   padding: 20px 40px;
   font-family: 'Krona One', sans-serif;
+  font-size: 16px;
 }
 
+button:hover {
+  background-color: #aeb2b1;
+}
+/*div the search button is in*/
 #button-div {
   text-align: center;
   margin: 20px;
 }
 
+/* Second page - players index page */
+/* Heading says Players */
 #players-header {
   font-family: 'Krona One', sans-serif;
   color: #093f96;
@@ -131,39 +153,71 @@ button {
 /* Player show page*/
 .div-specs-1 {
   height: 150px;
-  background-color: #093f96;
+  background-color: #c42929;
   font-family: 'Krona One', sans-serif;
   text-align: left;
-  padding-left: 10px;
+  /*padding: 5px 5px 5px 10px;*/
   color: #e5e3e3;
   box-shadow: 6px 4px 3px #3c4759;
+  background: -webkit-linear-gradient(left top, #c42929, #77c2ea); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #c42929, #77c2ea); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #c42929, #77c2ea); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #c42929, #77c2ea); /* Standard syntax */
+}
+.player-name {
+  font-family: 'Krona One', sans-serif;
+  padding: 2px 20px;
 }
 .player-pos-school {
   font-family: 'Open Sans',sans-serif;
+  padding: 2px 20px;
 }
 
 .holder-div {
-  background-color: #c42929;
-  padding: 30px 0px 35px 0px;
+  background-color: #093f96;
+  padding: 5px 0px 5px 10px;
   z-index: 1;
   color: #e5e3e3;
-  height: 200px;
+  height: 250px;
   box-shadow: 6px 4px 3px #3c4759;
+  background: -webkit-linear-gradient(left top, #093f96, #77c2ea); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #093f96, #77c2ea); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #093f96, #77c2ea); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #093f96, #77c2ea); /* Standard syntax */
 }
 
 .div-specs-2, .div-specs-3, .div-specs-4 {
   font-family: 'Open Sans',sans-serif;
   float: left;
-  padding: 10px 50px;
+  /*padding: 5px 60px;*/
+  text-align: center;
 }
 
 .div-specs-2 {
+  padding: 5px;
+}
 
+.specs-titles {
+  text-decoration: underline;
+}
+
+#algo {
+  clear: left;
+  text-align: center;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 18px;
+}
+
+.vert-line {
+  width: 1px;
+  height: 100px;
+  display: inline;
 }
 
 /* Chart css */
 #chartdiv {
   width: 100%;
-  height: 400px;
+  height: 350px;
   margin: auto;
+  background-color: #c2c6ce;
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523011434) do
+ActiveRecord::Schema.define(version: 20170530145928) do
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -21,14 +21,14 @@ ActiveRecord::Schema.define(version: 20170523011434) do
     t.string   "name"
     t.string   "position"
     t.string   "school"
-    t.integer  "age"
-    t.integer  "weight"
-    t.string   "height"
-    t.string   "minutes_played"
-    t.string   "injuries"
-    t.integer  "strength_of_schedule"
-    t.string   "position_injury"
-    t.string   "severity_of_injury"
+    t.float    "age"
+    t.float    "weight"
+    t.float    "height"
+    t.float    "minutes_played"
+    t.float    "injuries"
+    t.float    "strength_of_schedule"
+    t.float    "position_injury"
+    t.float    "severity_of_injury"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
