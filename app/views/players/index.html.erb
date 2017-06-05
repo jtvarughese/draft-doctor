@@ -1,12 +1,31 @@
 <h1 id="players-header">Players</h1>
 <h2 id="choose-player-header">Select Lottery Draft Candidate</h2>
 <!-- Displays a list of players as links to their own show page -->
+
 <div id="players-list-div">
-  <ol>
     <% @players.each do |player| %>
-      <li><a class="players-list"href="/players/<%= player.id %>"><%= player.name %></a>
+      <a class="players-list" id="clickThis" href="/players/<%= player.id %>">
+        <%= player.name %>
+      </a>
       <br>
-      </li>
     <% end %>
-  </ol>
 </div>
+
+<script>
+
+var clickThis = document.getElementById("clickThis")
+
+clickThis.addEventListener('click', randomValue)
+
+function randomValue() {
+  <% if @player %>
+
+    var playerId = <%= [(@player.age * 0.625 + @player.height * 0.5 +  @player.weight * 0.625) * (@player.injuries * 1.25 + @player.minutes_played * 0.1 + @player.strength_of_schedule/0.625) * (@player.position_injury * 0.625 + @player.severity_of_injury * 1) / 5000] %>
+    // Math.round(Math.random() * 100);
+    chart.arrows[0].setValue(playerId);
+    chart.axes[0].setTopText(playerId + " %");
+    // adjust darker band to new value
+    chart.axes[0].bands[1].setEndValue(playerId);
+  <% end %>
+}
+</script>

@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ @media (min-width 300px) {
+
+ }
+
+ @media (min-width 700px) {
+
+ }
 
 body {
   background-color: #e6e8ed;
@@ -45,7 +52,7 @@ body {
   font-family: 'Krona One', sans-serif;
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 14px;
   padding: 20px 20px;
 }
 
@@ -56,20 +63,43 @@ body {
 /* The name of app 'Sports Doctor' */
 
 #img-div {
-  width: 50%;
-  height: 10%;
-  opacity: 0.4;
+  background-color: #f4f7fc;
+  background-image: image('https://i.ytimg.com/vi/ZxsSPnxuizg/maxresdefault.jpg');
+  width: 100%;
+  height: 200px;
+  box-shadow: 6px 4px 3px #3c4759;
+  padding: 5px;
+  text-align: center;
+}
+
+#tagline-div {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Krona One', cursive;
+  color: #3e83f2;
+  padding-top: 30px;
+  /*text-shadow: 4px 4px #e82929;*/
+  font-size: 40px;
+}
+
+#tagline-div-2 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: #3e83f2;
+  font-size: 36px;
 }
 
 /* Homepage - div containing about us info */
 #about-us-div{
-  background: #c42929; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #c42929, #e25b58); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #c42929, #e25b58); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #c42929, #e25b58); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #c42929, #e25b58); /* Standard syntax */
+  background-color: #093f96;
+  background: -webkit-linear-gradient(left top, #093f96, #1d62d1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #093f96, #1d62d1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #093f96, #1d62d1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #093f96, #1d62d1); /* Standard syntax */
   padding: 30px 0px 35px 0px;
   box-shadow: 6px 4px 3px #3c4759;
+  margin-top: 15px;
 }
 /* Homepage - about us header and paragraph */
 .about-us-header {
@@ -96,11 +126,11 @@ body {
   color: #e5e3e3;
   text-align: center;
   height: 200px;
-  background-color: #093f96;
-  background: -webkit-linear-gradient(left top, #093f96, #1d62d1); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #093f96, #1d62d1); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #093f96, #1d62d1); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, #093f96, #1d62d1); /* Standard syntax */
+  background: #c42929; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #c42929, #e25b58); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #c42929, #e25b58); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #c42929, #e25b58); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #c42929, #e25b58); /* Standard syntax */
   box-shadow: 6px 4px 3px #3c4759;
 }
 /* search players button*/
@@ -108,7 +138,7 @@ button {
   text-align: center;
   background-color: #e5e3e3;
   border-radius: 6px;
-  padding: 20px 40px;
+  padding: 20px 80px;
   font-family: 'Krona One', sans-serif;
   font-size: 16px;
 }
@@ -141,8 +171,10 @@ button:hover {
   font-family: 'Open Sans', sans-serif;
   border: 1px solid #093f96;
   border-radius: 4px;
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
 }
 
 .players-list {
@@ -150,9 +182,15 @@ button:hover {
   color: black;
 }
 
+.players-list:hover {
+  color: red;
+}
+
 /* Player show page*/
 .div-specs-1 {
   height: 150px;
+  margin-bottom: 20px;
+  margin-top: -17px;
   background-color: #c42929;
   font-family: 'Krona One', sans-serif;
   text-align: left;
@@ -177,24 +215,45 @@ button:hover {
   background-color: #093f96;
   padding: 5px 0px 5px 10px;
   z-index: 1;
-  color: #e5e3e3;
-  height: 250px;
+  color: #dddbdb;
+  height: 280px;
   box-shadow: 6px 4px 3px #3c4759;
   background: -webkit-linear-gradient(left top, #093f96, #77c2ea); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #093f96, #77c2ea); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #093f96, #77c2ea); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #093f96, #77c2ea); /* Standard syntax */
+  overflow: scroll;
 }
 
-.div-specs-2, .div-specs-3, .div-specs-4 {
+.div-specs-2, .div-specs-3, .div-specs-4, .div-specs-5 {
   font-family: 'Open Sans',sans-serif;
-  float: left;
-  /*padding: 5px 60px;*/
-  text-align: center;
+}
+
+.div-specs-2:hover, .div-specs-3:hover, .div-specs-4:hover, .div-specs-5:hover {
+  color: #f7f7f7;
 }
 
 .div-specs-2 {
-  padding: 5px;
+  float: left;
+  padding: 5px 70px 5px 10px;
+  text-align: left;
+}
+
+.div-specs-3 {
+  padding: 5px 80px 5px 80px;
+  float: left;
+  text-align: center;
+}
+
+.div-specs-4 {
+  padding: 5px 70px 5px 70px;
+  float: left;
+  text-align: center;
+}
+.div-specs-5 {
+  padding: 5px 10px 5px 75px;
+  float: left;
+  text-align: right;
 }
 
 .specs-titles {
@@ -205,7 +264,11 @@ button:hover {
   clear: left;
   text-align: center;
   font-family: 'Open Sans',sans-serif;
-  font-size: 18px;
+  font-size: 28px;
+}
+
+#algo:hover {
+  color: #f7f7f7;
 }
 
 .vert-line {
@@ -215,9 +278,19 @@ button:hover {
 }
 
 /* Chart css */
+.div-of-charts {
+  display: inline;
+}
 #chartdiv {
-  width: 100%;
-  height: 350px;
-  margin: auto;
+  width: 30%;
+  float: left;
+  height: 300px;
+  margin-left: 120px;
   background-color: #c2c6ce;
+}
+
+#chartdiv1 {
+  float: left;
+  width: 50%;
+  height: 400px;
 }
