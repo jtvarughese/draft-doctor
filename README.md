@@ -25,4 +25,4 @@ Through careful research of ESPN and the American Medical Association, I determi
 * AmCharts
 ---
 ## Deployed:
-* via Heroku:
+* via Heroku: https://ancient-dawn-71246.herokuapp.com/
